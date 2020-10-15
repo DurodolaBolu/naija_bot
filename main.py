@@ -46,8 +46,9 @@ def retweet():
         save_last_since_id(since_id_filename,max(new_since_id))
         new_since_id.clear()
 
-while True:
-    retweet()
-    logging.info('Bot Temporarily de-activated')
-    time.sleep(300)
+if __name__ == "__main__":
+    while True:
+        retweet()
+        logging.info('Bot Temporarily de-activated')
+        time.sleep(300)
 
